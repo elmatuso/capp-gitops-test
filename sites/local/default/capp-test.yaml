@@ -1,0 +1,18 @@
+name: capp-test
+namespace: default
+spec:
+  configurationSpec:
+    template:
+      metadata: {}
+      spec:
+        containers:
+        - image: blabla
+          name: ""
+          resources: {}
+  logSpec: {}
+  routeSpec:
+    trafficTarget: {}
+  scaleSpec:
+    metric: concurrency
+  state: enabled
+  volumesSpec: {}
