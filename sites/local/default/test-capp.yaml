@@ -1,0 +1,22 @@
+name: test-capp
+namespace: default
+spec:
+  configurationSpec:
+    template:
+      metadata: {}
+      spec:
+        containers:
+        - env:
+          - name: ENV_VAR
+            value: hello
+          image: nginx:latest
+          name: app
+          resources: {}
+  logSpec: {}
+  routeSpec:
+    trafficTarget: {}
+  scaleSpec:
+    metric: concurrency
+    minReplicas: 1
+  state: enabled
+  volumesSpec: {}
